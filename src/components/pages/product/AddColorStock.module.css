@@ -1,0 +1,41 @@
+.container_product {
+    max-width: 600px;
+    margin: auto;
+    padding: .3em 0;
+    background-color: white;
+}
+.container_product h3,
+.container_product p {
+    text-align: center;
+    margin: .4em 0;
+}
+
+.container_product h3 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: .5em auto;
+}
+
+.container_product span {
+    font-weight:  bold;
+}
+
+.container_form > div{
+    margin: .5em 0;
+}
+
+.rigth {
+    text-align: end;
+}
+
+.center {
+    max-width: 600px;
+    margin: 0.5em auto;
+    background-color: white;
+    margin-top: 0;
+    padding: 0.5em;
+}
+
+.center span {
+    font-weight: bold;
+}

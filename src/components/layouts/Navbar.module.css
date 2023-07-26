@@ -1,0 +1,32 @@
+.nav_bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: var(--third-color);
+}
+
+.nav_bar ul {
+    display: flex;
+    gap: 5px;
+    list-style: none;
+}
+
+.nav_bar ul li a,
+.nav_bar ul li p {
+    text-decoration: none;
+    padding: .5em .8em;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--fifth-color);
+}
+
+.nav_bar ul li p {
+    margin-top: -0.4em;
+}
+
+.nav_bar ul li a:hover,
+.nav_bar ul li p:hover {
+    text-decoration: none;
+    background-color: var(--fifth-color);
+    color: var(--room-color);
+}
