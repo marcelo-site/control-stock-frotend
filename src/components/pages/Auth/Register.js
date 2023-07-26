@@ -11,30 +11,30 @@ import Select from '../../layouts/Select'
 function Register() {
     const [user, setUser] = useState({})
     const { register } = useContext(Context)
-    const officies = ['Vendedor', 'Gerente', 'Repositor']
+    const officies = ['Admin', 'Gerente', 'Vendedor', 'Repositor']
 
     function handleChange(e) {
         setUser({ ...user, [e.target.name]: e.target.value })
     }
-    function handleSelect (e) {
+    function handleSelect(e) {
         setUser({ ...user, [e.target.name]: e.target.options[e.target.selectedIndex].value })
     }
     function submit(e) {
-        setUser({...user, loja: 1})
         e.preventDefault()
+        user.loja = e.target.loja.value
         register(user)
     }
     return (
         <section className={styles.form_container}>
             <h1>Registro</h1>
             <form onSubmit={submit}>
+                <input type='hidden' value='1' name='loja' />
                 <Input
                     type='text'
                     name='name'
                     text='Nome:'
                     placeholder='Insira o seu nome'
                     handleOnChange={handleChange}
-
                 />
                 <Input
                     type='email'
@@ -43,20 +43,11 @@ function Register() {
                     placeholder='Insira o seu E-mail'
                     handleOnChange={handleChange}
                 />
-                 {/* <Input
-                    type=''
+                <Select
+                    text='Função:'
                     name='office'
-                    text='Cargo'
-                    placeholder='Insira sua função'
-                    handleOnChange={handleChange}
-                /> */}
-                <Select 
-                text='Função:'
-                name='office'
-                // text=''
-                handleChange={handleSelect}
-                options={officies}
-                // value={value || ''}
+                    handleChange={handleSelect}
+                    options={officies}
                 />
                 <Input
                     type='password'
