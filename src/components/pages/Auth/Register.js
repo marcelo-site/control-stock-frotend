@@ -11,7 +11,6 @@ import Select from '../../layouts/Select'
 function Register() {
     const [user, setUser] = useState({})
     const { register } = useContext(Context)
-    // const [office, setOffice] = useState(undefined)
     const officies = ['Vendedor', 'Gerente', 'Repositor']
 
     function handleChange(e) {
