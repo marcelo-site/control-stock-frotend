@@ -38,7 +38,8 @@ function Home() {
     }
     return (
         <section>
-            <div>Esse projeto á apenas uma demonstração, em um projeto real talvez precise de mais regras para o acesso, tipo quem é o adimnistrador, quem pode editar ou só vizualizar</div>
+            <div>Esse projeto á apenas uma demonstração, em um projeto real talvez precise de mais regras para o acesso, tipo quem é o adimnistrador, quem pode editar ou só vizualizar.</div>
+            {!authenticated && (<p>faça login ou crie uma conta, clicando mo menu acima, para acessar todas as funcionalidades.</p>)}
             <div>
                 <h1>Produtos</h1>
             </div>
